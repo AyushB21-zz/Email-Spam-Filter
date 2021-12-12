@@ -1,0 +1,16 @@
+def send():
+    global ro
+    ro = Tk()
+    ro.title('Send Message')
+    ro.geometry('480x480')
+    new = Button(ro, text='New Message', height=15, width=20, bg='aqua', relief=GROOVE, command=mail)
+    new.grid(row=1, column=0, sticky=N)
+    # new=Button(ro,text='Sent Messages',command=sent) (was hiding the button)
+    # new.grid(row=1,column=1,sticky=N)
+    new = Button(ro, text='Log Out', height=15, width=20, bg='aqua', relief=GROOVE, command=logout)
+    new.grid(row=2, column=2, sticky=N)
+    new = Button(ro, text='Seen And Not Replied', height=15, width=20, bg='aqua', relief=GROOVE, command=readm)
+    new.grid(row=1, column=2, sticky=N)
+    new = Button(ro, text='Unseen And Not Replied', height=15, width=20, bg='aqua', relief=GROOVE, command=readn)
+    new.grid(row=2, column=0, sticky=N)
+    ro.mainloop()
